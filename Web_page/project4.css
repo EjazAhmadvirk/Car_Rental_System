@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+/* body styling tag  */
+body{
+    background: white;
+
+}
+/* header stylling tag  */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+/* E&A Cars logo stylling tag  */
+.logo{
+    font-size: 30px;
+    font-family: 'Times New Roman';
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+/* sections tags stylling tag  */
+.navbar a{
+    font-size: 20px;
+    font-family: Arial;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+    transition: 0.5s;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+/* more stylling add here of sections tag  */
+.navbar a:hover,
+.navbar a.active{
+    color: blue;
+
+}
+/* social-media content styling   */
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+}
+/* social media icon stylling  */
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transform: rotate(45deg);
+    transition: 0.5s;
+    opacity: 0;
+    animation: slidesci 0.5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+
+}
+/* social media icon stylling here  */
+.social-media a:hover{
+    border-color: white;
+
+}
+
+
+
+.social-media a i {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    transform: rotate(-45deg);
+
+
+
+}
+/* home section stylling start here  */
+.Home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow: hidden;
+
+}
+/* Home content stylling part  */
+.Home-Content{
+ 
+    max-width: 630px;
+
+}
+ /* home conten heading tag 1 start  here  */
+.Home-Content h1{
+    font-size: 55px;
+
+    font-family: Arial;
+    line-height: 1.2;
+    color: rgb(255, 0, 0);
+    opacity: 0;
+    animation: slideh1 1s ease forwards;
+    animation-delay: 1s;
+
+
+}
+/* home content h3 stylling part  */
+.Home-Content h3{
+    font-size: 40px;
+    font-family: 'Times New Roman';
+    color: rgba(0, 0, 0, 0.838);
+    opacity: 0;
+    animation: slideh1 1s ease forwards;
+    animation-delay: 1.3s;
+}
+ /* Home content paragraph styling start here  */
+.Home-Content p{
+    font-size: 15px;
+    margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 1.6s;
+
+}
+/* btn styyling start here  */
+.btn{
+    display: inline-block;
+    padding: 10px 28px;
+    background: blue;
+    border: 2px solid blue;
+    border-radius: 6px;
+    box-shadow: 0,0,10px rgba(0,0,0,0.1);
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: 0.5s;
+    opacity: 0;
+    animation: slideh1 1s ease forwards;
+    animation-delay: 1.75s;
+
+
+} 
+
+.btn:hover{
+    background: white;
+    color: blue;
+
+}
+/* image portion stylling start here  */
+.home-img{
+    position: relative;
+    right: -7%;
+    width: 350px;
+    height: 350px;
+    transform: rotate(45deg);
+
+}
+
+/* white background picture stylling */
+.home-img .cars {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 25px solid blue;
+    box-shadow: -15px 15px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    animation: Zoomout 1s ease forwards;
+    animation-delay: 1.6s;
+
+
+
+}
+/* car image stylling tag  */
+.home-img .cars img {
+    position: absolute;
+    max-width: 625px;
+    top: 110px;
+    left: -250px;
+    transform: rotate(-45deg);
+    opacity: 0;
+    animation: Car 1s ease forwards;
+    animation-delay: 2s;
+
+
+}
+/* blue box stylling part  */
+.Home .cars2{
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    height: 750px;
+    width: 750px;
+    background: blue;
+    transform: rotate(45deg);
+    z-index: -1;
+    opacity: 0;
+    animation: Car2 1s ease forwards;
+   
+    
+}
+
+
+/* KEYFRAM ANIMATIONS  */
+/* Animation of logo  */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+/* Animation of H1 and H3  tag of Home Content  */
+@keyframes slideh1 {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+/* Animation pf p tag of Home Content  */
+@keyframes slideleft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+
+/* Animation of navbar tags  */
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+/* Animation of icons  */
+@keyframes slidesci {
+    0% {
+        transform: translateX(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(45deg);
+        opacity: 1;
+    }
+
+}
+
+/* Animation of white box start here  */
+@keyframes Zoomout {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) ;
+        opacity: 1;
+    }
+
+}
+
+/* Animation of car  */
+@keyframes Car {
+    0% {
+        transform: translate(300px, -300px) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0) scale(1) rotate(-45deg);
+        opacity: 1;
+    }
+
+}
+
+
+/* Animation of blue Box tag start here  */
+
+
+@keyframes Car2 {
+    0% {
+        right: -40%;
+        opacity: 0;
+    }
+    100% {
+        right: -25%;
+        opacity: 1;
+    }
+
+}
+
